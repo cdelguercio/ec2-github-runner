@@ -14,6 +14,7 @@ class Config {
       ec2InstanceId: core.getInput('ec2-instance-id'),
       iamRoleName: core.getInput('iam-role-name'),
       runnerHomeDir: core.getInput('runner-home-dir'),
+      blockDeviceMappings: JSON.parse(core.getInput('block-device-mappings')),
       preRunnerScript: core.getInput('pre-runner-script'),
       runAsService: core.getInput('run-runner-as-service') === 'true',
       runAsUser: core.getInput('run-runner-as-user')
